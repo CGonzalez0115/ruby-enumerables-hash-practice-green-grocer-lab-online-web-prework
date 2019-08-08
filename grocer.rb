@@ -20,7 +20,7 @@ def apply_coupons(cart, coupons)
     "KALE"    => {:price => 3.00, :clearance => false, :count => 1},
     "AVOCADO W/COUPON" => {:price => 2.50, :clearance => true, :count => 2},
   }
-  
+
 end
 
 def apply_clearance(cart)
