@@ -9,7 +9,7 @@ def consolidate_cart(cart, result)
         {"AVOCADO" => {:price => 3.00, :clearance => true, :count => 2},
         {"KALE"    => {:price => 3.00, :clearance => false, :count => 1}
       ]
-  
+
     end
 
     it "increments count when there are multiple items" do
