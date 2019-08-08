@@ -1,34 +1,26 @@
 def consolidate_cart(cart, result)
   when "adds a count of one to each item when there are no duplicates" do
-      cart = [
+      cart => [
         {"AVOCADO" => {:price => 3.00, :clearance => true }},
         {"AVOCADO" => {:price => 3.00, :clearance => true }},
         {"KALE"    => {:price => 3.00, :clearance => false}}
       ]
-      result = [
+      result => [
         {"AVOCADO" => {:price => 3.00, :clearance => true, :count => 2},
         {"KALE"    => {:price => 3.00, :clearance => false, :count => 1}
       ]
 
-    end
-
-    it "increments count when there are multiple items" do
-      avocado = find_item('AVOCADO')
-      cart = [avocado, avocado, find_item('KALE')]
-
-      result = consolidate_cart(cart)
-      expect(result["AVOCADO"][:price]).to eq(3.00)
-      expect(result["AVOCADO"][:clearance]).to eq(true)
-      expect(result["AVOCADO"][:count]).to eq(2)
-
-      expect(result["KALE"][:price]).to eq(3.00)
-      expect(result["KALE"][:clearance]).to eq(false)
-      expect(result["KALE"][:count]).to eq(1)
-    end
 end
 
 def apply_coupons(cart, coupons)
-  # code here
+  when "adds the coupon price to the property hash of couponed item" do# code here
+  cart => [:item] "AVOCADO", :num => 2, :cost => 5.00}
+  coupons => {
+    "AVOCADO" => {:price => 3.00, :clearance => true, :count => 1},
+    "KALE"    => {:price => 3.00, :clearance => false, :count => 1},
+    "AVOCADO W/COUPON" => {:price => 2.50, :clearance => true, :count => 2},
+  }
+  
 end
 
 def apply_clearance(cart)
