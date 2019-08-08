@@ -34,5 +34,5 @@ def apply_clearance(cart)
 end
 
 def checkout(cart, coupons)
-  # code here
+  when "calls on #apply_clearance after calling on #apply_coupons with multiple items, coupons, and items are on clearance" do
 end
